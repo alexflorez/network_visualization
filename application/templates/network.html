@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+Network Visualization
+  <div>
+    <svg>
+      <g id="links"></g>
+      <g id="nodes"></g>
+    </svg>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script type="text/javascript" src="{{ url_for('static', filename='js/d3.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/network.js') }}"></script>
+{% endblock %}
